@@ -335,3 +335,26 @@ footer {
   column-gap: 1.2rem;
   height: 2rem;
 }
+
+.hide {
+  display: none;
+}
+
+.user-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+}
+
+.user-profile img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.user-profile span {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(gray100);
+}
