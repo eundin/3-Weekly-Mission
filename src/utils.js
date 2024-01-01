@@ -4,7 +4,7 @@ const EMAIL_REGEX = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
 export const TEST_USER = {
   email: "test@codeit.com",
-  password: "codeit101",
+  password: "sprint101",
 };
 
 export function setInputError(elements, message) {
@@ -25,18 +25,23 @@ export function isEmailValid(email) {
 
 export function isPasswordValid(password) {
   const isEightLettersOrMore = password.length >= 8;
-  const hasNumberAndCharacter = password.match(/[0-9]/g) && password.match(/[a-zA-Z]/gi);
+  const hasNumberAndCharacter =
+    password.match(/[0-9]/g) && password.match(/[a-zA-Z]/gi);
   return isEightLettersOrMore && hasNumberAndCharacter;
 }
 
 export function togglePassword(input, toggleButton) {
   if (input.getAttribute("type") === "password") {
     input.setAttribute("type", "text");
-    toggleButton.getElementsByTagName("img")[0].setAttribute("src", "./images/eye-on.svg");
+    toggleButton
+      .getElementsByTagName("img")[0]
+      .setAttribute("src", "./images/eye-on.svg");
     return;
   }
   input.setAttribute("type", "password");
-  toggleButton.getElementsByTagName("img")[0].setAttribute("src", "./images/eye-off.svg");
+  toggleButton
+    .getElementsByTagName("img")[0]
+    .setAttribute("src", "./images/eye-off.svg");
 }
 
 export function redirectToIfAccessTokenExists(destination) {
