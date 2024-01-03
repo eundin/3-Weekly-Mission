@@ -357,4 +357,8 @@ footer {
   font-size: 14px;
   font-weight: 400;
   color: var(gray100);
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }

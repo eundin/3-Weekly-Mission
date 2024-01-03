@@ -4,6 +4,7 @@ const headerUserImg = document.querySelector(".header-user-img");
 const headerUserName = document.querySelector(".header-user-name");
 const headerUserFolder = document.querySelector(".header-user-folder");
 const sectionImgs = document.querySelectorAll(".section-img");
+const sectionImgsLink = document.querySelectorAll(".section-img-link");
 
 const accessToken = localStorage.getItem("accessToken");
 if (accessToken) {
@@ -61,5 +62,6 @@ function showImgs(userFolderData) {
   console.log(folderLinks);
   folderLinks.forEach((element, i) => {
     sectionImgs[i].src = element.imageSource;
+    sectionImgsLink[i].href = element.url;
   });
 }
