@@ -13,10 +13,16 @@ type LayoutProps = {
   footerRef?: RefObject<HTMLElement>;
 };
 
-export const Layout = ({ children, isSticky = true, footerRef }: LayoutProps) => {
+export const Layout = ({
+  children,
+  isSticky = true,
+  footerRef,
+}: LayoutProps) => {
   const { data } = useGetUser();
-  const profile = data ? { email: data.email, imageSource: data.profileImageSource } : null;
 
+  const profile = data
+    ? { email: data.email, imageSource: data.profileImageSource }
+    : null;
   return (
     <div>
       <NavigationBar profile={profile} isSticky={isSticky} />

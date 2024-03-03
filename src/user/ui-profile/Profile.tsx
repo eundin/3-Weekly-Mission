@@ -13,7 +13,12 @@ type ProfileProps = {
 export const Profile = ({ profile }: ProfileProps) => {
   return (
     <div className={cx("container")}>
-      <img className={cx("image")} src={profile.imageSource} alt="프로필 이미지" />
+      <h1>아니 얘 어딨어?</h1>
+      <img
+        className={cx("image")}
+        src={profile.imageSource}
+        alt="프로필 이미지"
+      />
       <span className={cx("email")}>{profile.email}</span>
     </div>
   );

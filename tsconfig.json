@@ -17,6 +17,11 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/sharing/ui-navigation-bar/NavigationBar.tsx"
+  ],
   "exclude": ["node_modules"]
 }
